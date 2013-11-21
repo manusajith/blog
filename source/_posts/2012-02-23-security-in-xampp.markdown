@@ -19,7 +19,7 @@ meta:
   _edit_last: '1'
 ---
 XAMPP is not meant for production use but only for developers in a development environment. XAMPP is configured is to be as open as possible and to allow the web developer anything he/she wants. For development environments this is great but in a production environment it could be fatal.
-
+<!--more-->
 Here a list of missing security in XAMPP:
 <ul>
 	<li>The MySQL administrator (root) has no password.</li>

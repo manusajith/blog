@@ -23,6 +23,8 @@ meta:
 
 Is a much newer phenomenon having emerged much after the onset of Internet. Internet grew in a completely unplanned and unregulated manner. Even the inventors of Internet could not have really anticipated the scope and far reaching consequences of cyberspace. The growth rate of cyberspace has been enormous. Internet is growing rapidly and with the population of Internet doubling roughly every 100 days, Cyberspace is becoming the new preferred environment of the world. With the spontaneous and almost phenomenal growth of cyberspace, new and ticklish issues relating to various legal aspects of cyberspace began cropping up.
 
+<!--more-->
+
 In response to the absolutely complex and newly emerging legal issues relating to cyberspace, CYBERLAW or the law of Internet came into being. The growth of Cyberspace has resulted in the development of a new and highly specialized branch of law called CYBERLAWS- LAWS OF THE INTERNET AND THE WORLD WIDE WEB.
 
 Cyberlaw is a generic term which refers to all the legal and regulatory aspects of Internet and the World Wide Web. Anything concerned with or related to or emanating from any legal aspects or issues concerning any activity of netizens in and concerning Cyberspace comes within the ambit of Cyber-law.

@@ -7,10 +7,13 @@ categories: Rails Ruby Gem MathJax
 status: publish
 type: post
 published: true
+excerpt: "Ever wanted to include Mathematics equations in your rails application and wondered how to implement it ?. The following gem will help to implement MathJax into your rails application without much fuzz."
 ---
 
 
 Ever wanted to include Mathematics equations in your rails application and wondered how to implement it ?. The following gem will help to implement MathJax into your rails application without much fuzz.
+
+<!--more-->
 
 # MathJax-Rails
 

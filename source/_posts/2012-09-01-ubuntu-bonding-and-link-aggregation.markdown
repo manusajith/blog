@@ -31,6 +31,11 @@ meta:
   _wp_old_slug: ''
   dsq_thread_id: '928566182'
 ---
+
+Blog post on link aggregation in ubuntu
+
+<!--more-->
+
 ##Installation##
 ifenslave is used to attach and detach slave network interfaces to a bonding device.
     sudo apt-get install ifenslave

@@ -30,6 +30,10 @@ meta:
   dsq_thread_id: ''
 ---
 
+Tutorial on Installing Ioncube Loader on WHM/cPanel
+
+<!--more-->
+
 ##Download It##
     wget http://downloads.ioncube.com/loader_download /ioncube_loaders_lin_x86.tar.gz
     tar zfx ioncube_loaders_lin_x86.tar.gz

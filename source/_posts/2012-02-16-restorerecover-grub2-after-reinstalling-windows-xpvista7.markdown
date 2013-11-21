@@ -17,6 +17,7 @@ meta:
 ---
 After reinstalling Windows in the computer dual boot with both Windows and Ubuntu Linux,you need restore grub because mbr has been rewritten. This tutorial shows how to restore grub 2.
 
+<!--more-->
 ##1).Using grub4dos##
 First download grub4dos from <a title="click to download grub4dos" href="http://download.gna.org/grub4dos/" target="_blank">here</a>.<br>
 

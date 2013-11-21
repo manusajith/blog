@@ -32,6 +32,9 @@ meta:
 
 Cheat sheets are basically wiki pages accessible from the command line. You can browse, add, or edit cheat sheets. Try to keep them concise. For a style guide, check out the cheat cheat sheet.
 
+<!-- more -->
+
+
 ###Get started:###
     $ sudo gem install cheat
     $ cheat strftime

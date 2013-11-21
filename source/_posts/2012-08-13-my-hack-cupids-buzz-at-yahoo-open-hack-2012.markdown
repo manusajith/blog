@@ -42,6 +42,8 @@ I mean..
 
 Follow her on Twitter... Make him/her your Facebook friend... Commit n collaborate with him/her on Github (or whatever...), All in just one single click... ;)
 
+<!--more-->
+
 Here I present,'Cupid's Buzz',before all single boys and girls... Chase your 'dream' :D...
 
 A hack you would once feel thankful to... ;)

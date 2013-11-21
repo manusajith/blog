@@ -34,6 +34,8 @@ meta:
 
 A critical security issue has recently been pointed out on servers that run Nginx and PHP via FastCGI. The issue allows anyone to execute their own PHP code on the system, I don't think I have to remind you of the consequences this could have. I will attempt to provide a simple explanation of the issue and more importantly how to fix it.
 
+<!--more-->
+
 ##What is the issue? ##
 I would like to begin by discussing the nature of the problem: it is not caused by Nginx itself - it is not a bug or a security breach in itself. Actually, it is the way that people usually configure Nginx FastCGI options to work with PHP, and how PHP reacts to that configuration. Pretty much everyone adopts the same configuration without being aware of the issue.
 

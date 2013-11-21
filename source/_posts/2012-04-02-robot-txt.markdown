@@ -23,6 +23,8 @@ meta:
 ---
 All of us want our new websites to be indexed by search engines as soon as possible. But there are instances when we do not want our web pages to be indexed by search engines. For example, if you are developing a new section to your website and the web pages are still under construction you do not want the search engines to index any incomplete web pages.
 
+<!--more-->
+
 Some folks have a duplicate copy of their website or blog under a sub domain name (example sandbox.codingarena.in) as a testing site. If Google discovers this site it might penalize you for having duplicate content.
 
 Therefore it is best to tell search engines not to index any web pages that are currently under development or testing. This is where the robots.txt file becomes very useful. The robots.txt file is placed under the root directory of you web server (i.e that is the directory where the domain is pointing to). For example, my domain name codingarena.in points to the directory /www/codingarena on my web server. This is the directory where you will place the robots.txt file. The robots.txt file cannot be placed in any sub directories (example /www/codingarena/images).

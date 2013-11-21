@@ -21,6 +21,9 @@ meta:
 ---
 Google Funny Search Codes
 
+<!-- more -->
+
+
 &nbsp;
 
 1. Type let it snow and click on Im Feeling Lucky. (awesome snow effect)

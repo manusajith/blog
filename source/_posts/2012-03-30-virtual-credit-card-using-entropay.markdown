@@ -25,6 +25,7 @@ meta:
   dsq_thread_id: '985627667'
 ---
 The need of Virtual Credit Card (VCC) has really gone high with the introduction of new PayPal rules in India and other countries. First of all VCC is not only for PayPal; it is useful for all kinds of online shopping. Once you have created a VCC it can be used anywhere just like an ordinary Credit Card. In this post I have specifically dealt with its usage regarding PayPal verification. There are few good sites that can be used for creating VCC and I will explain this tutorial with my favorite site  EntroPay.
+<!--more-->
 
 &nbsp;
 

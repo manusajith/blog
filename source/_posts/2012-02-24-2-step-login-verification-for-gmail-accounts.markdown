@@ -21,7 +21,7 @@ meta:
   dsq_thread_id: '1075589891'
 ---
 Did you know that <a href="http://mashable.com/category/google/">Google</a> offers 2-step login verification for Gmail accounts? The feature has been around a while, and now Google has written a reminder for all users who need an extra layer of security for their Gmail account and other services connected to it.
-
+<!--more-->
 <strong>How Does the 2-step Verification System Work?</strong>
 
 The 2-step verification introduces a second layer of protection by using a one-time verification code that is sent to you <a title="How to Set Up and Use Facebook Via Mobile SMS" href="http://www.guidingtech.com/8635/use-facebook-via-mobile-sms/">via a text message</a> or a <a title="How to Get Started with Google Voice on Desktop and Mobile" href="http://www.guidingtech.com/6170/how-to-get-started-with-google-voice-on-desktop-and-mobile/">voice message</a> to your mobile device. Google will ask for this code if it senses that you have logged in from a new browser or a new device, other than your default ones. You have to key in this code after the password to authenticate your Google account. Sending an authentication code to your mobile makes it almost impossible for hackers to break into your account. Of course, you must have a mobile that supports SMS or voice messages from Google.

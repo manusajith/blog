@@ -25,6 +25,8 @@ published: true
 
 Recently my friend was working on a project that had a requirement to export the html page to PDF. He had some issues setting this up. So I thought I would write this article, so that it will be helpful for  anyone who faces the same issue. It’s easy getting your pdf in rails as long as you follow the right steps ;) (But unfortunately my good friend doesnt always do that for some reason of his own - No offense intended ;) )
 
+<!--more-->
+
 If you are using Rails, then you have this wonderful <a href="http://rubygems.org">rubygems</a> where you can find a no of gems for pdf generation. The suggested ones are <a href="http://rubygems.org/gems/prawn">prawn</a> and <a href="http://rubygems.org/gems/wicked_pdf">wicked_pdf</a>.
 
 ##Which one to chose ?##

@@ -33,6 +33,8 @@ In short, a zone is only a portion of a domain in that sense that it doesnt go o
 
 Every domain name, which is a part of the DNS system, has several DNS settings, also known as DNS records. In order for these DNS records to be kept in order, the DNS zone was created. The total of all DNS zones, which are organized in a hierarchical tree-like order of cascading lower-level domains, form the DNS namespace.
 
+<!--more-->
+
 Domain name servers store information about part of the domain name space called a zone. The name server is authoritative for a particular zone. A single name server can be authoritative for many zones.
 
 Understanding the difference between a zone and a domain is sometimes confusing. A zone is simply a portion of a domain. For example, the Domain codingarena.in may contain all of the data for codingarena.in, blog.codingarena.in and sandbox.codingarena.in. However, the zone codingarena.in contains only information for codingarena.in and references to the authoritative name servers for the subdomains.

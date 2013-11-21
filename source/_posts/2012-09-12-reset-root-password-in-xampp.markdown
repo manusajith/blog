@@ -33,6 +33,8 @@ meta:
 
 In case you forgot your root password for mysql and phpmyadmin
 
+<!--more-->
+
 Go to your xampp\mysql\bin\ folder
 
 Edit my.ini and insert

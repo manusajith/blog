@@ -32,6 +32,8 @@ meta:
 ##A simple shell script to monitor whether your server is running or not.##
 This script should be made to run on some other server, because when your server goes down all the scripts will stop executing too, so there is no point in running the script on the same server.
 
+<!--more-->
+
 ###Create a new file###
     vim servermonitor.sh
 

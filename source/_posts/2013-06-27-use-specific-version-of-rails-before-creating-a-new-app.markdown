@@ -12,6 +12,8 @@ published: true
 You want to develop with the latest version of Rails but you have an existing application that
 uses an older version that you are not ready to bring up to date. What do you do?
 
+<!--more-->
+
 By default gem will keep older versions of installed gems until you tell it not to. To see what you have installed:
 
     $ gem list --local

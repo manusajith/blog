@@ -36,6 +36,8 @@ meta:
 
 <a href="http://code.google.com/codejam/" title="Code Jam" target="_blank">Google Code Jam </a> is an international programming competition hosted and administered by <a href="http://google.com" title="Google" target="_blank">Google</a>. The competition began in 2003 as a means to identify top engineering talent for potential employment at Google. The competition consists of a set of algorithmic problems which must be solved in a fixed amount of time. Competitors may use any programming language and development environment to obtain their solutions.
 
+<!--more-->
+
 In 2013, Google Code Jam will mark its tenth year of bringing the world's coding community together to solve tough algorithmic puzzles.
 
 Schedule for Google Code Jam 2013 is
