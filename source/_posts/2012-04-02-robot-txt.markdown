@@ -1,0 +1,68 @@
+---
+layout: post
+title: Robot.txt file on your server
+tags:
+- bots
+- codingarena
+- google
+- google search
+- internet
+- Internet
+- manu
+- neo
+- search engine
+- seo
+- site map
+- web
+- Website
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+All of us want our new websites to be indexed by search engines as soon as possible. But there are instances when we do not want our web pages to be indexed by search engines. For example, if you are developing a new section to your website and the web pages are still under construction you do not want the search engines to index any incomplete web pages.
+
+Some folks have a duplicate copy of their website or blog under a sub domain name (example sandbox.codingarena.in) as a testing site. If Google discovers this site it might penalize you for having duplicate content.
+
+Therefore it is best to tell search engines not to index any web pages that are currently under development or testing. This is where the robots.txt file becomes very useful. The robots.txt file is placed under the root directory of you web server (i.e that is the directory where the domain is pointing to). For example, my domain name codingarena.in points to the directory /www/codingarena on my web server. This is the directory where you will place the robots.txt file. The robots.txt file cannot be placed in any sub directories (example /www/codingarena/images).
+
+Let us look into the steps involved in creating a robots.txt file:
+
+1. Create a file called robots.txt using a text editor (such as notepad).
+Please note that the file has to be saved in text format. If you use a non-text editor like Microsoft Word make sure that you save the file in text format.
+
+2. Add the necessary commands
+Based on what sections of the website you want to block you  have to type the following lines of commands in the robots.txt file.
+
+The general syntax for commands are as follows:
+
+User-Agent: [Name of search engine Spider or Bot]
+Disallow: [Directory or File Name to be BLOCKED]
+
+Example 1: Prevent Google from indexing the page called 'newpage.htm' under the directory 'newsection'
+
+User-Agent: Googlebot
+Disallow: /newsection/newpage.htm
+
+Example 2: Prevent all search engine bots from indexing any files which are stored inside the directory 'newsection' (i.e block the entire directory).
+
+User-Agent: *
+Disallow: /newsection/
+
+Example 3: To block the entire website from search engines.
+WARNING: The following command will totally block the entire website from search engines.
+
+User-Agent: *
+Disallow: /
+
+3.Upload the file
+Once you have added the necessary command to the robots.txt file you can upload the file to your web server. As indicated earlier, the robots.txt file has to be placed in the directory where your domain name is pointed at.
+
+
+<a title="Neo" href="http://facebook.com/manusajith" target="_blank">Manu</a>
+
+<a title="Codingarena" href="http://codingarena.in" target="_blank">http://codingarena.in</a>
+
+<a href="http://twitter.com/manusajith" title="Twitter">@manusajith</a> | <a href="http://github.com/manusajith" title="Github">@github</a>
+
