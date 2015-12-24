@@ -1,6 +1,6 @@
 # Site settings
 title: Codingarena
-email: neo@codingarene.in
+email: neo@codingarena.in
 description: "I'm a programmer from the Venice of the East, the very own Gods own country, Kerala, India who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion."
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
 url: "http://codingarena.in" # the base hostname & protocol for your site
