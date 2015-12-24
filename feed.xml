@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codingarena</title>
-    <description>I&#39;m programmer from the Venice of the East, the very own Gods own country, Kerala, who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion.</description>
+    <description>I&#39;m a programmer from the Venice of the East, the very own Gods own country, Kerala, India who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion.</description>
     <link>http://codingarena.in/blog/</link>
     <atom:link href="http://codingarena.in/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Dec 2015 01:45:38 +0530</pubDate>
-    <lastBuildDate>Fri, 25 Dec 2015 01:45:38 +0530</lastBuildDate>
+    <pubDate>Fri, 25 Dec 2015 01:51:13 +0530</pubDate>
+    <lastBuildDate>Fri, 25 Dec 2015 01:51:13 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
