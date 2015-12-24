@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>mathjax-rails</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+
+  <meta property="og:site_name" content="Codingarena" />
+  <meta property="og:title" content="mathjax-rails"/>
+  
+  <meta property="og:description" content="Ever wanted to include Mathematics equations in your rails application and wondered how to implement it ?. The following gem will help to implement MathJax into your rails application without much ..." />
+  
+  <meta property="og:image" content="http://codingarena.in/blog/assets/images/manu.png" />
+  <meta property="og:url" content="http://codingarena.in/blog/blog/2013/11/22/mathjax-rails/" >
+  <meta property="og:type" content="blog" />
+  <meta property="article:published_time" content="2013-11-22T03:08:06+05:30">
+
+  <link rel="canonical" href="http://codingarena.in/blog/blog/2013/11/22/mathjax-rails/">
+
+  <link rel="shortcut icon" href="/blog/assets/images/favicon.ico">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/blog/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/blog/css/print.css" />
+</head>
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://codingarena.in" class="logo-readium"><span class="logo" style="background-image: url(/blog/assets/images/manu.png)"></span></a>
+
+<!-- header end -->
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">mathjax-rails</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/blog/assets/images/manu.png)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2013-11-22T03:08:06+05:30">22 Nov 2013</time>
+              tagged on <span class="post-tag-">, <a href="/tag/"></a></span>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Ever wanted to include Mathematics equations in your rails application and wondered how to implement it ?. The following gem will help to implement MathJax into your rails application without much fuzz.</p>
+
+<!--more-->
+
+<h1 id="mathjax-rails">MathJax-Rails</h1>
+
+<p>We are living in an age, where displaying math on web pages is never hard, thanks to the great work of <a href="https://github.com/mathjax/MathJax">MathJax</a>.</p>
+
+<p>To quote the description from its official website,</p>
+
+<blockquote>
+  <p><a href="https://github.com/mathjax/MathJax">MathJax</a> is an open source JavaScript display engine for mathematics that works in all modern browsers.</p>
+
+  <p>No more setup for readers. No more browser plugins. No more font installations… It just works.</p>
+</blockquote>
+
+<h2 id="why-bother-another-gem">Why bother another gem?</h2>
+
+<p>Integrating MathJax into a rails project however could be a pain. MathJax is HUGE. It makes your project folder swollen very much, because of the excessive amount of files contained in this package. Including mathjax inside your developing directory makes your TextMate less responsive, because when TextMate loses focus and then regains focus, it will scan the whole directory structure for change.</p>
+
+<p>Another problem is, where to put? Put into <code>public</code> does not seem the best practice, since beginning with rails 3.1 <code>public</code> is by default ignored in production environment. Plus it is big, when using git, it leaves you no choice but to throw mathjax inside .gitignore, which makes sharing across developers less painless.</p>
+
+<h2 id="so">So?</h2>
+
+<p>That’s the time when mathjax-rails comes into play!</p>
+
+<ul>
+  <li>It maintains MathJax at a system-wide directory.</li>
+  <li>By simply including mathjax-rails in your Gemfile, all your rails app can benefit from MathJax immediately.</li>
+  <li>You can control the version of MathJax by controlling the version of mathjax-rails, which is done simply via bundler.</li>
+</ul>
+
+<h2 id="which-version-of-mathjax-does-it-use">Which version of MathJax does it use?</h2>
+
+<p>We maintain mathjax-rails to always use the latest version of stable MathJax realeases.</p>
+
+<p>To see the actual version, check the constant Mathjax::Rails::MATHJAXVERSION.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<pre><code>gem 'mathjax-rails'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install mathjax-rails
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<p>add the following to config/routes.rb (you can change the name of course)</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="n">mathjax</span> <span class="s1">&#39;mathjax&#39;</span></div></div></pre></div></figure>
+
+<p>add the script tag inside app/views/layouts/application.html.erb</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;%=</span> <span class="n">mathjax_tag</span> <span class="cp">%&gt;</span></div></div></pre></div></figure>
+
+<p>and it is done!</p>
+
+<p>To try it, write a simple formula, for example,</p>
+
+<p>[\int_a^b f(x) dx=F(b)-F(a)]</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>By default the <code>TeX-AMS_HTML-full.js</code> is loaded as the configuration file.</p>
+
+<p>If you do not want any configuration file to be loaded:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;%=</span> <span class="n">mathjax_tag</span> <span class="ss">:config</span><span class="o">=&gt;</span><span class="kp">false</span> <span class="cp">%&gt;</span></div></div></pre></div></figure>
+
+<p>If you want to load another configuration file, say <code>Accessible-full.js</code>:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;%=</span> <span class="n">mathjax_tag</span> <span class="ss">:config</span><span class="o">=&gt;</span><span class="s1">&#39;Accessible-full.js&#39;</span> <span class="cp">%&gt;</span></div></div></pre></div></figure>
+
+<p>Additional configuration can be added directly before mathjax_tag, for example:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">(&#x7b;</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">   <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">&#x7b;</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">     <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">]</span> <span class="p">],</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">     <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">   <span class="p">&#x7d;</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="p">&#x7d;);</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nt">&lt;/script&gt;</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;%=</span> <span class="n">mathjax_tag</span> <span class="cp">%&gt;</span></div></div></pre></div></figure>
+
+<p>For more options please consult the MathJax documentation.</p>
+
+<h2 id="what-did-it-do-to-my-rails-project">What did it do to my rails project</h2>
+
+<p>Three simple things: it adds 1 controller <code>MathjaxRailsController</code>; 1 helper method <code>mathjax_tag</code>; 1 router method <code>mathjax</code>.</p>
+
+<p>It won’t pollute your rails project more than the above three.</p>
+
+<h2 id="note">Note</h2>
+
+<ul>
+  <li>
+    <p>If you have a fast CDN service at hand, you don’t need this gem. Putting your MathJax at CDN is probably the best choice.</p>
+  </li>
+  <li>
+    <p>A new version of mathjax-rails was released today with support for Rails 4.x apps.</p>
+  </li>
+</ul>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=mathjax-rails&amp;url=http://codingarena.in/blog/2013/11/22/mathjax-rails"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/blog/assets/images/manu.png)">Blog Logo</div>
+              <h4>Manu S Ajith</h4>
+              <p class="bio" style="width:200%"> #programmer, #hacker, #entrepreneur, open source evangelist. #Ruby, #Golang, #Elixir, #JS, Lazy #Blogger. Writes #code for a living.</p>
+              <hr>
+              <p class="published">Published <time datetime="2013-11-22 03:08">22 Nov 2013</time></p>
+            </section>
+          </div>
+          
+        </div>
+        
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'codingarenablog'; // required: replace example with your forum shortname
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="inner">
+        <a href="/blog/" class="btn">Back to Home</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/blog/assets/js/index.js"></script>
+<script type="text/javascript" src="/blog/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+  </body>
+</html>
