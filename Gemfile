@@ -15,4 +15,5 @@ group :jekyll_plugins do
   gem 'octopress-codefence'
   gem 'octopress-solarized'
   gem 'octopress-gist'
+  gem 'jekyll-compose'
 end

@@ -5,9 +5,40 @@
     <description>I&#39;m a programmer from the Venice of the East, the very own Gods own country, Kerala, India who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion.</description>
     <link>http://codingarena.in/blog/</link>
     <atom:link href="http://codingarena.in/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Dec 2015 01:56:40 +0530</pubDate>
-    <lastBuildDate>Fri, 25 Dec 2015 01:56:40 +0530</lastBuildDate>
+    <pubDate>Fri, 08 Jan 2016 00:56:18 +0530</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2016 00:56:18 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Git fatal: remote origin already exists</title>
+        <description>&lt;p&gt;One of my colleagues was facing an issue with git, trying to add a remote to the git repo.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;➜  repo_name git:(master) git remote add origin git@github.com:username/repo_name.git
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;fatal: remote origin already exists.&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;As the error message indicates, there is already a remote configured with the name &lt;code&gt;origin&lt;/code&gt;. So you can either add the new remote with a different name say &lt;code&gt;github&lt;/code&gt; or update the existing one if you don’t need it:&lt;/p&gt;
+
+&lt;p&gt;To add a new remote with an alternate name, called for example github instead of origin (which obviously already exists in your system), do the following:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote add github git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Alternatively, you can update the existing remote &lt;code&gt;origin&lt;/code&gt; using the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote set-url origin git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you want to list the current remotes, you can check the same  using&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;git remote -v&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 08 Jan 2016 00:48:17 +0530</pubDate>
+        <link>http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</link>
+        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>lunchy: A friendly wrapper for OS X launchctl</title>
@@ -849,191 +880,6 @@ in phpMyAdmin in the mysql database (or just leave it like this if MySQL cannot 
         <category>website</category>
         
         <category>xampp</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu Bonding and link aggregation</title>
-        <description>&lt;p&gt;Blog post on link aggregation in ubuntu&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;ifenslave is used to attach and detach slave network interfaces to a bonding device.
-    sudo apt-get install ifenslave&lt;/p&gt;
-
-&lt;h2 id=&quot;interface-configuration&quot;&gt;Interface Configuration&lt;/h2&gt;
-&lt;p&gt;Edit your interfaces configuration:
-     sudo vi /etc/network/interfaces&lt;/p&gt;
-
-&lt;p&gt;For example, to combine eth0 and eth1 as slaves to your bonding interface:
-       auto eth0
-       iface eth0 inet manual
-       bond-master bond0&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;   auto eth1
-   iface eth1 inet manual
-   bond-master bond0
-
-   auto bond0
-   iface bond0 inet static
-   address 192.168.1.10
-   gateway 192.168.1.1
-   netmask 255.255.255.0
-   bond-mode 802.3ad
-   bond-miimon 100
-   bond-lacp-rate 1
-   bond-slaves none
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;checking-the-bonding-interface&quot;&gt;Checking the bonding interface&lt;/h2&gt;
-&lt;p&gt;Link information is available under     /proc/net/bonding/.
-To check bond0 for example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cat /proc/net/bonding/bond0
-Ethernet Channel Bonding Driver: v3.5.0 (November 4, 2008)
-
-Bonding Mode: IEEE 802.3ad Dynamic link aggregation
-Transmit Hash Policy: layer2 (0)
-MII Status: up
-MII Polling Interval (ms): 100
-Up Delay (ms): 0
-Down Delay (ms): 0
-
-802.3ad info
-LACP rate: fast
-Aggregator selection policy (ad_select): stable
-bond bond0 has no active aggregator
-
-Slave Interface: eth1
-MII Status: up
-Link Failure Count: 0
-Permanent HW addr: 00:0c:29:f5:b7:11
-Aggregator ID: N/A
-
-Slave Interface: eth2
-MII Status: up
-Link Failure Count: 0
-Permanent HW addr: 00:0c:29:f5:b7:1b
-Aggregator ID: N/A
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;bringing-updown-bounded-interface&quot;&gt;Bringing up/down Bounded interface&lt;/h2&gt;
-&lt;p&gt;To bring the bounded interface, run
-    ifup bond0&lt;/p&gt;
-
-&lt;p&gt;To bring down a bounded interface, run&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ifdown bond0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;ethernet-bonding-modes&quot;&gt;Ethernet Bonding modes&lt;/h2&gt;
-
-&lt;p&gt;Ethernet bonding has different modes you can use. You specify the mode for your bonding interface in /etc/network/interfaces. For example:
-    bond-mode active-backup&lt;/p&gt;
-
-&lt;p&gt;Descriptions of bonding modes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Mode 0
-balance-rr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Round-robin policy: Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance.&lt;/p&gt;
-
-&lt;p&gt;Mode 1
-active-backup&lt;/p&gt;
-
-&lt;p&gt;Active-backup policy: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond’s MAC address is externally visible on only one port (network adapter) to avoid confusing the switch. This mode provides fault tolerance. The primary option affects the behavior of this mode.&lt;/p&gt;
-
-&lt;p&gt;Mode 2
-balance-xor&lt;/p&gt;
-
-&lt;p&gt;XOR policy: Transmit based on [(source MAC address XOR’d with destination MAC address) modulo slave count]. This selects the same slave for each destination MAC address. This mode provides load balancing and fault tolerance.&lt;/p&gt;
-
-&lt;p&gt;Mode 3
-broadcast&lt;/p&gt;
-
-&lt;p&gt;Broadcast policy: transmits everything on all slave interfaces. This mode provides fault tolerance.&lt;/p&gt;
-
-&lt;p&gt;Mode 4
-802.3ad&lt;/p&gt;
-
-&lt;p&gt;IEEE 802.3ad Dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Utilizes all slaves in the active aggregator according to the 802.3ad specification.&lt;/p&gt;
-
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites:&lt;/h2&gt;
-
-&lt;p&gt;Ethtool support in the base drivers for retrieving the speed and duplex of each slave.
-A switch that supports IEEE 802.3ad Dynamic link aggregation. Most switches will require some type of configuration to enable 802.3ad mode.
-Mode 5
-balance-tlb&lt;/p&gt;
-
-&lt;p&gt;Adaptive transmit load balancing: channel bonding that does not require any special switch support. The outgoing traffic is distributed according to the current load (computed relative to the speed) on each slave. Incoming traffic is received by the current slave. If the receiving slave fails, another slave takes over the MAC address of the failed receiving slave.&lt;/p&gt;
-
-&lt;h2 id=&quot;prerequisites-1&quot;&gt;Prerequisites:&lt;/h2&gt;
-
-&lt;p&gt;Ethtool support in the base drivers for retrieving the speed of each slave.
-Mode 6
-balance-alb&lt;/p&gt;
-
-&lt;p&gt;Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. The bonding driver intercepts the ARP Replies sent by the local system on their way out and overwrites the source hardware address with the unique hardware address of one of the slaves in the bond such that different peers use different hardware addresses for the server.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://facebook.com/manusajith&quot;&gt;Manu&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codingarena.in&quot;&gt;www.codingarena.in&lt;/a&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://twitter.com/manusajith&quot; title=&quot;Twitter&quot;&gt;@manusajith&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://github.com/manusajith&quot; title=&quot;Github&quot;&gt;@github&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        <pubDate>Sat, 01 Sep 2012 00:00:00 +0530</pubDate>
-        <link>http://codingarena.in/blog/blog/2012/09/01/ubuntu-bonding-and-link-aggregation/</link>
-        <guid isPermaLink="true">http://codingarena.in/blog/blog/2012/09/01/ubuntu-bonding-and-link-aggregation/</guid>
-        
-        <category>bridging</category>
-        
-        <category>Coding</category>
-        
-        <category>codingarena</category>
-        
-        <category>connections</category>
-        
-        <category>eth0</category>
-        
-        <category>google</category>
-        
-        <category>internet</category>
-        
-        <category>Internet</category>
-        
-        <category>lan</category>
-        
-        <category>link</category>
-        
-        <category>link aggregation</category>
-        
-        <category>Linux</category>
-        
-        <category>manu</category>
-        
-        <category>neo</category>
-        
-        <category>networking</category>
-        
-        <category>ppp0</category>
-        
-        <category>server</category>
-        
-        <category>ubuntu</category>
-        
-        <category>wifi</category>
-        
-        <category>wlan0</category>
         
         
       </item>
