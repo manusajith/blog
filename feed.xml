@@ -5,9 +5,44 @@
     <description>I&#39;m a programmer from the Venice of the East, the very own Gods own country, Kerala, India who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion.</description>
     <link>http://codingarena.in/blog/</link>
     <atom:link href="http://codingarena.in/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 Jan 2016 00:56:18 +0530</pubDate>
-    <lastBuildDate>Fri, 08 Jan 2016 00:56:18 +0530</lastBuildDate>
+    <pubDate>Fri, 08 Jan 2016 01:05:38 +0530</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2016 01:05:38 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How to Fix MySQL [ERROR] Unknown/unsupported storage engine: InnoDB</title>
+        <description>&lt;p&gt;After playing around with my MySQL configuration file in my docker container, MySQL was throwing a weird error, and was failing to start.&lt;/p&gt;
+
+&lt;p&gt;I checked the error logs and found an entry in the error log.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;[ERROR] Plugin ‘InnoDB’ init function returned error.
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;[ERROR] Plugin ‘InnoDB’ registration as a STORAGE ENGINE failed.
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;[ERROR] Unknown/unsupported storage engine: InnoDB
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;[ERROR] Aborting
+&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;After googling and searching SO for a while, I realised that  the solution is to rename or delete some of the log files of InnoDB. In case you are concerned about the data, it would be wise to have a backup of those files, in my case I encountered the error on a fresh docker MariaDB container. Hence I chose to remove the files.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;rm /var/lib/mysql/ib_logfile0
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;rm /var/lib/mysql/ib_logfile1&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;and then restart MySQL.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;root@docker# /etc/init.d/mysql start
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;Starting MySQL database server: mysqld . ..
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;Checking for tables which need an upgrade, are corrupt or were not closed cleanly..
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;root@docker#&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;And thats it, I now have my MySQL server up and running once again.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Jan 2016 00:48:17 +0530</pubDate>
+        <link>http://codingarena.in/blog/blog/2016/01/08/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</link>
+        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/08/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>Git fatal: remote origin already exists</title>
@@ -804,82 +839,6 @@ fi
         <category>site</category>
         
         <category>status</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Reset root password in XAMPP</title>
-        <description>&lt;p&gt;In case you forgot your root password for mysql and phpmyadmin&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Go to your xampp\mysql\bin\ folder&lt;/p&gt;
-
-&lt;p&gt;Edit my.ini and insert
-    skip-grant-tables
-below [mysqld]&lt;/p&gt;
-
-&lt;p&gt;Restart MySQL&lt;/p&gt;
-
-&lt;p&gt;Set new password for your root user by running
-    UPDATE mysql.user SET Password=PASSWORD(‘new_password’) WHERE User=’root’
-in phpMyAdmin in the mysql database (or just leave it like this if MySQL cannot be accessed from remote hosts)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://facebook.com/manusajith&quot;&gt;Manu&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codingarena.in&quot;&gt;www.codingarena.in&lt;/a&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;http://twitter.com/manusajith&quot; title=&quot;Twitter&quot;&gt;@manusajith&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://github.com/manusajith&quot; title=&quot;Github&quot;&gt;@github&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        <pubDate>Wed, 12 Sep 2012 00:00:00 +0530</pubDate>
-        <link>http://codingarena.in/blog/blog/2012/09/12/reset-root-password-in-xampp/</link>
-        <guid isPermaLink="true">http://codingarena.in/blog/blog/2012/09/12/reset-root-password-in-xampp/</guid>
-        
-        <category>apache</category>
-        
-        <category>Coding</category>
-        
-        <category>coding</category>
-        
-        <category>codingarena</category>
-        
-        <category>database</category>
-        
-        <category>hacking</category>
-        
-        <category>Linux</category>
-        
-        <category>manu</category>
-        
-        <category>mysql</category>
-        
-        <category>neo</category>
-        
-        <category>password</category>
-        
-        <category>reset</category>
-        
-        <category>root</category>
-        
-        <category>security</category>
-        
-        <category>Security</category>
-        
-        <category>server</category>
-        
-        <category>ubuntu</category>
-        
-        <category>website</category>
-        
-        <category>xampp</category>
         
         
       </item>
