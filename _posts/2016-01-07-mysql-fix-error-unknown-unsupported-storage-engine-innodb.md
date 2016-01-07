@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Fix MySQL [ERROR] Unknown/unsupported storage engine: InnoDB"
-date: 2016-01-08 00:48:17 +0530
+date: 2016-01-07 00:48:17 +0530
 comments: true
 categories: Git
 ---
