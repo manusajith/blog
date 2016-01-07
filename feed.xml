@@ -5,40 +5,9 @@
     <description>I&#39;m a programmer from the Venice of the East, the very own Gods own country, Kerala, India who codes Ruby, Golang, Elixir and JS for a living, hacks for fun and learns for passion.</description>
     <link>http://codingarena.in/blog/</link>
     <atom:link href="http://codingarena.in/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 Jan 2016 01:08:52 +0530</pubDate>
-    <lastBuildDate>Fri, 08 Jan 2016 01:08:52 +0530</lastBuildDate>
+    <pubDate>Fri, 08 Jan 2016 01:11:19 +0530</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2016 01:11:19 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
-    
-      <item>
-        <title>Git fatal: remote origin already exists</title>
-        <description>&lt;p&gt;One of my colleagues was facing an issue with git, trying to add a remote to the git repo.&lt;/p&gt;
-
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;➜  repo_name git:(master) git remote add origin git@github.com:username/repo_name.git
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;fatal: remote origin already exists.&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-
-&lt;p&gt;As the error message indicates, there is already a remote configured with the name &lt;code&gt;origin&lt;/code&gt;. So you can either add the new remote with a different name say &lt;code&gt;github&lt;/code&gt; or update the existing one if you don’t need it:&lt;/p&gt;
-
-&lt;p&gt;To add a new remote with an alternate name, called for example github instead of origin (which obviously already exists in your system), do the following:&lt;/p&gt;
-
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote add github git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-
-&lt;p&gt;Alternatively, you can update the existing remote &lt;code&gt;origin&lt;/code&gt; using the following command:&lt;/p&gt;
-
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote set-url origin git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-
-&lt;p&gt;If you want to list the current remotes, you can check the same  using&lt;/p&gt;
-
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;git remote -v&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Fri, 08 Jan 2016 00:48:17 +0530</pubDate>
-        <link>http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</link>
-        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</guid>
-        
-        
-        <category>git</category>
-        
-      </item>
     
       <item>
         <title>How to Fix MySQL [ERROR] Unknown/unsupported storage engine: InnoDB</title>
@@ -66,9 +35,40 @@
 
 &lt;p&gt;And thats it, I now have my MySQL server up and running once again.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 07 Jan 2016 00:48:17 +0530</pubDate>
-        <link>http://codingarena.in/blog/blog/2016/01/07/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</link>
-        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/07/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</guid>
+        <pubDate>Fri, 08 Jan 2016 01:10:17 +0530</pubDate>
+        <link>http://codingarena.in/blog/blog/2016/01/08/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</link>
+        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/08/mysql-fix-error-unknown-unsupported-storage-engine-innodb/</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Git fatal: remote origin already exists</title>
+        <description>&lt;p&gt;One of my colleagues was facing an issue with git, trying to add a remote to the git repo.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;➜  repo_name git:(master) git remote add origin git@github.com:username/repo_name.git
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;fatal: remote origin already exists.&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;As the error message indicates, there is already a remote configured with the name &lt;code&gt;origin&lt;/code&gt;. So you can either add the new remote with a different name say &lt;code&gt;github&lt;/code&gt; or update the existing one if you don’t need it:&lt;/p&gt;
+
+&lt;p&gt;To add a new remote with an alternate name, called for example github instead of origin (which obviously already exists in your system), do the following:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote add github git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Alternatively, you can update the existing remote &lt;code&gt;origin&lt;/code&gt; using the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$ git remote set-url origin git@github.com:username/repo_name.git&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you want to list the current remotes, you can check the same  using&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;git remote -v&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 08 Jan 2016 00:48:17 +0530</pubDate>
+        <link>http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</link>
+        <guid isPermaLink="true">http://codingarena.in/blog/blog/2016/01/08/git-fatal-remote-origin-already-exists/</guid>
         
         
         <category>git</category>
